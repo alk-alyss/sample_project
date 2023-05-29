@@ -1,11 +1,12 @@
 def subtract(a, b):
-    return "POSITIVE" if a - b > 0 else "NEGATIVE"
+    return "POSITIVE" if a - b >= 0 else "NEGATIVE"
 
 import unittest
 
 class SubtractTest(unittest.TestCase):
 	def test_subtract(self):
 		self.assertEqual(subtract(10, 5), "POSITIVE")
+		self.assertEqual(subtract(10, 10), "POSITIVE")
 		self.assertEqual(subtract(5, 10), "NEGATIVE")
 
 if __name__ == "__main__":
